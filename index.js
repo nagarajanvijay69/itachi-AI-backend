@@ -100,6 +100,11 @@ app.post('/getdata', async (req, res) => {
      })
 
 
+app.get('init', async (req, res) => {
+         await main("get ready");
+         return res.status(200).json({ message: "Initialization successful" });
+})
+
 app.listen(5000,()=>{
      console.log(`Server running on the port ${process.env.PORT}`);
 })
