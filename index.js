@@ -100,8 +100,7 @@ app.post('/getdata', async (req, res) => {
      })
 
 
-app.get('init', async (req, res) => {
-         await main("get ready");
+app.get('/', async (req, res) => {
          return res.status(200).json({ message: "Initialization successful" });
 })
 
