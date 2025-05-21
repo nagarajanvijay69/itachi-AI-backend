@@ -101,7 +101,7 @@ app.post('/getdata', async (req, res) => {
 
 
 app.get('/', async (req, res) => {
-         return res.status(200).json({ message: "Initialization successful" }).send("Welcome to Itachi Ai Backend Page");
+         return res.status(200).json({ message: "Initialization successful" });
 })
 
 app.listen(5000,()=>{
