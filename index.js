@@ -104,6 +104,10 @@ app.use('/', async (req, res) => {
          return res.status(200).json({ message: "Initialization successful" });
 })
 
+app.get('/ping', async(req, res)=>{
+     res.status(200).send("This is API check")
+})
+
 app.listen(5000,()=>{
      console.log(`Server running on the port ${process.env.PORT}`);
 })
