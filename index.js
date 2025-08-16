@@ -23,6 +23,7 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.post('/message', async (req, res) => {
        const { prompt }   = req.body; 
+       console.log(prompt);
      if(!prompt) 
           return res.status(400).json({error: "Message is required"});
      try {
@@ -108,7 +109,7 @@ app.get('/ping', async(req, res)=>{
      res.status(200).send("This is API check")
 })
 
-app.listen(5000,()=>{
+app.listen(3000,()=>{
      console.log(`Server running on the port ${process.env.PORT}`);
 })
 
