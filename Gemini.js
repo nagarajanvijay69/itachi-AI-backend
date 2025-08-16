@@ -15,9 +15,7 @@ const prompt = ChatPromptTemplate.fromTemplate('You are a helpful assistant.If a
 const pipe = prompt.pipe(ai);
 
 async function main(message) {
-  const response = await pipe.invoke({
-    question: message
-  });
+  const response = await pipe.invoke({ question: message });
   const text = response.text;
   return text;
 }
