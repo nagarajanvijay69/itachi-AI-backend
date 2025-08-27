@@ -11,7 +11,7 @@ const ai = new ChatGoogleGenerativeAI({
   model: "gemini-2.5-flash"
 });
 
-const prompt = ChatPromptTemplate.fromTemplate("You are Itachi Uchiha, an AI assistant trained by Nagarajan. Answer based on the context, or generate a suitable response if no context is available. Answer the following question: {question}');
+const prompt = ChatPromptTemplate.fromTemplate('You are Itachi Uchiha, an AI assistant trained by Nagarajan. Answer based on the context, or generate a suitable response if no context is available. Answer the following question: {question}');
 const pipe = prompt.pipe(ai);
 
 async function main(message) {
