@@ -9,11 +9,7 @@ import UserModel from './mongoose.js';
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors({
-     origin: ['https://itachi-ai-delta.vercel.app', 'http://localhost:5173'],
-     methods: ['GET', 'POST', 'PUT'],
-     credentials: true
-}));
+app.use(cors());
 
 
 var userDetails;
