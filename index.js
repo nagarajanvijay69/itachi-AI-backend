@@ -9,7 +9,11 @@ import UserModel from './mongoose.js';
 dotenv.config();
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+     origin: ['https://itachi-idb9.onrender.com', 'http://localhost:5173'],
+     methods: ['GET', 'POST', 'PUT'],
+     credentials: true
+}));
 
 
 var userDetails;
