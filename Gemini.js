@@ -8,7 +8,7 @@ dotenv.config();
 
 const ai = new ChatGoogleGenerativeAI({
   apiKey: process.env.GOOGLE_API_KEY,
-  model: "gemini-2.0-flash"
+  model: "gemini-2.5-flash-lite"
 });
 
 const date = new Date();
@@ -24,4 +24,4 @@ async function main(message) {
   return text;
 }
 
-export default main;
+export default main
