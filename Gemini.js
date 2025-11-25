@@ -8,7 +8,7 @@ dotenv.config();
 
 const ai = new ChatGoogleGenerativeAI({
   apiKey: process.env.GOOGLE_API_KEY,
-  model: "gemini-2.5-flash-live"
+  model: "gemini-2.5-flash"
 });
 
 
